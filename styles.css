@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap');
+/* Importa la fuente 'Jersey 10 Charted' desde Google Fonts */
+
+body {
+  /* Estilos para el cuerpo del documento */
+  font-family: sans-serif;
+  /* Establece una fuente de respaldo como sans-serif */
+  font-size: 16px;
+  /* Establece el tamaño de la fuente en 16 píxeles */
+  background-image: url("img/portada.jpg");
+  /* Establece una imagen de fondo */
+  background-size: cover;
+  /* Hace que la imagen de fondo cubra todo el tamaño del elemento */
+  background-attachment: fixed;
+  /* Fija la imagen de fondo para que permanezca en su posición al desplazarse */
+  background-position: center center;
+  /* Centra la imagen de fondo horizontal y verticalmente */
+}
+
+h1 {
+  /* Estilos para los encabezados de nivel 1 */
+  font-family: "Jersey 10 Charted", sans-serif;
+  /* Establece la fuente principal como "Jersey 10 Charted" */
+  font-weight: 400;
+  /* Define el grosor de la fuente como normal (400) */
+  font-style: normal;
+  /* Define el estilo de la fuente como normal */
+}

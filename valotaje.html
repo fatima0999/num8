@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Meta etiquetas requeridas -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="volta.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="librerias/bootstrap.min.css">
+</head>
+<body style="background-image: url(img/voltaje.jpg); font-family:sans-serif;font-size: 16px; background-size: cover; background-attachment: fixed;background-position: center center;">
+    <div class="container">
+        <!-- Contenedor principal -->
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <!-- Columna vacía para espaciado -->
+            <br>
+            <!-- Salto de línea -->
+            <div class="col-sm-4" Style="height:450px;background-color: rgba(255, 255, 255, 0.5); /* Define el color de fondo con transparencia */
+            border: 5px solid #c09e9e; /* Define el borde del cuadro de texto */
+            padding: 10px; /* Define el espaciado dentro del cuadro de texto */
+            width: 26px; /* Define el ancho del cuadro de texto */
+            color: #333; /* Define el color del texto dentro del cuadro de texto */
+            margin-top: 100px; ">
+                <!-- Columna principal para contenido -->
+                <br>
+                <br>
+                <!-- Saltos de línea -->
+                <h1 style="color: rgb(23, 20, 20);text-align: center;">VOLTAJE</h1>
+                <!-- Título principal -->
+                <label for="voltaje" style="text-align: center;">Ingresa el valor de corriente:</label>
+                <!-- Etiqueta para descripción del primer campo de entrada -->
+                <input type="number" class="form-control" name="numero1" id="numero1" placeholder="solo valores numericos" required>
+                <!-- Campo de entrada para corriente -->
+                <br>
+                <!-- Salto de línea -->
+                <label for="voltaje2" style="text-align: center;">Ingresa el valor de resistencia:</label>
+                <!-- Etiqueta para descripción del segundo campo de entrada -->
+                <input type="number" class="form-control" name="numero2" id="numero2" placeholder="solo valores numericos" required/>
+                <!-- Campo de entrada para resistencia -->
+                <br>
+                <br>
+                <!-- Salto de línea -->
+                <span class="btn btn-primary" id="btnCalcular" name="btnCalcular">Calcular</span>
+                <!-- Botón para calcular -->
+                <a href="index.html"> Volver Atrás</a>
+                <!-- Enlace para regresar -->
+                <br>
+                <!-- Salto de línea -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="librerias/popper.min.js"></script>
+        <script src="librerias/jquery-3.7.1.min.js"></script>
+        <script src="librerias/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+<script>
+    // Espera a que el documento esté listo para interactuar
+    $(document).ready(function(){
+        // Asigna una función al clic del botón de calcular
+        $('#btnCalcular').click(function(){
+            // Obtiene los valores de corriente y resistencia ingresados por el usuario
+            let numero1 = $('#numero1').val();
+            let numero2 = $('#numero2').val();
+
+            // Convierte los valores a enteros para realizar la operación
+            let uno = parseInt(numero1);
+            let dos = parseInt(numero2);
+
+            // Calcula el voltaje (V = I * R)
+            let operacion = (uno * dos);
+
+            // Muestra el resultado del cálculo en la consola
+            console.log('El resultado del voltaje es:' + operacion);
+        });
+    });
+</script>
+
+

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Jersey+10+Charted&display=swap');
+
+/* Importa las fuentes 'Concert One' y 'Jersey 10 Charted' desde Google Fonts */
+
+h1 {
+    /* Estilo para los encabezados de nivel 1 */
+    font-family: "Concert One", sans-serif;
+    /* Establece la fuente principal como "Concert One" */
+    font-weight: 400;
+    /* Define el grosor de la fuente como normal (400) */
+    font-style: normal;
+    /* Define el estilo de la fuente como normal */
+}

@@ -1,0 +1,96 @@
+<!--Declara el tipo de documento y la versión.-->
+<!doctype html>
+<!--Especifica el idioma del documento.-->
+<html lang="en">
+    <!--Contiene metadatos sobre el documento HTML-->
+    <head>
+        <!--Establece el título del documento que se muestra en la pestaña del navegador.-->
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <!-- Establece la codificación de caracteres del documento en UTF-8-->
+        <meta charset="utf-8">
+        <!-- Establece las propiedades del viewport para un diseño responsivo.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Establece las propiedades del viewport para un diseño responsivo.
+        Se enlazan archivos CSS externos y de Bootstrap.-->
+        <link rel="stylesheet" href="corriente.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="librerias/bootstrap.min.css">
+    </head>
+    <body style="background-image: url(img/q.jpg); font-family:sans-serif;font-size: 16px; background-size: cover; background-attachment: fixed;background-position: center center;">
+        <!--Contiene el contenido del documento-->
+        <!-- Contenedor principal de Bootstrap para el diseño de la página.-->
+        <div class="container">
+            <!-- Fila para organizar elementos en columnas-->
+            <div class="row">
+                <!--Columna vacía con ancho de 4 en dispositivos pequeños y superiores.-->
+                <div class="col-sm-4"></div>
+                <!--Columna vacía con ancho de 4 en dispositivos pequeños y superiores.-->
+                <!--height: Altura del elemento.
+                background-color: Color de fondo con transparencia.
+                border: Borde del elemento.
+                padding: Espaciado interno del elemento.
+                width: Ancho del elemento.
+                color: Color del texto dentro del elemento.
+                margin-top: Margen superior del elemento.-->
+                <div class="col-sm-4" Style="height:450px;background-color: rgba(255, 255, 255, 0.5); /* Define el color de fondo con transparencia */
+                border: 5px solid #c09e9e; /* Define el borde del cuadro de texto */
+                padding: 10px; /* Define el espaciado dentro del cuadro de texto */
+                width: 26px; /* Define el ancho del cuadro de texto */
+                color: #333; /* Define el color del texto dentro del cuadro de texto */
+                margin-top: 100px;">
+                    <br>
+                    <br>
+                <!-- Encabezado principal para el título-->
+                    <h1 style="color: rgb(23, 20, 20); text-align: center;">CORRIENTE</h1>
+                    <!--Etiqueta para describir los campos de entrada.-->
+                    <label for="voltaje">Ingresa el valor de  corriente:</label>
+                    <!--Campos de entrada para números.-->
+                    <input type="number" class="form-control" name="numero1" id="numero1" placeholder="solo valores numericos" required>
+
+                    <br>
+                    <label for="voltaje2">Ingresa el valor de  resitencia:</label>
+                    <input type="number" class="form-control" name="numero2" id="numero2" placeholder="solo valores numericos" required/>
+                    <br>
+                    <br>
+                    <span class="btn btn-primary" id="btnCalcular" name="btnCalcular">Calcular</span>
+                    <a href="index.html"> Volver Atrás</a>
+                    <br>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="librerias/popper.min.js"></script>
+        <script src="librerias/jquery-3.7.1.min.js"></script>
+        <script src="librerias/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+<script>
+    // Espera a que el documento HTML se cargue completamente
+$(document).ready(function(){
+
+// Asigna un evento de clic al botón con el id "btnCalcular"
+$('#btnCalcular').click(function(){
+
+    // Obtiene el valor ingresado por el usuario para la corriente desde el campo de entrada con el id "numero1"
+    let numero1 = $('#numero1').val();
+    
+    // Obtiene el valor ingresado por el usuario para la resistencia desde el campo de entrada con el id "numero2"
+    let numero2 = $('#numero2').val();
+
+    // Convierte los valores obtenidos a enteros utilizando parseInt()
+    let uno = parseInt(numero1);
+    let dos = parseInt(numero2);
+
+    // Realiza la operación de división para calcular la corriente (I = V/R)
+    let operacion = (uno / dos);
+
+    // Muestra el resultado del cálculo de corriente en la consola del navegador
+    console.log('El resultado del CORRIENTE es:' + operacion);
+});
+});
+
+</script>
+
